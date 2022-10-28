@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AiDoor</string>
+
+    // login 화면에 쓰이는 문자열
+    <string name="login_scr_signin">SIGN IN</string>
+    <string name="login_scr_forgetpassword">Forgot password?</string>
+    <string name="login_scr_continue">CONTINUE</string>
+    <string name="login_scr_gosignup">Don\'t have an account? Sign Up</string>
+
+    // logup 화면에 쓰이는 문자열
+    <string name="logup_scr_signup">SIGN UP</string>
+    <string name="logup_scr_create_account">Create An Account</string>
+    <string name="logup_scr_forgetpassword">Forgot password?</string>
+    <string name="logup_scr_continue">CONTINUE</string>
+    <string name="logup_scr_passwordrule">Use 8 or more characters with a mix of letters\, numbers &amp; symbols</string>
+    <string name="logup_scr_policy">By signing up, you’re agree to our \nTerms of Use and Privacy Policy</string>
+    <string name="logup_scr_gosignup">Already have an account? Sign In</string>
 </resources>

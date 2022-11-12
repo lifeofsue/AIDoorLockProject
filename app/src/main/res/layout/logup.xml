@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:hint="User Name"
-            android:fontFamily="@font/"
+            android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
             tools:ignore="HardcodedText" />
         <EditText
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:hint="Email"
-            android:fontFamily="@font/"
+            android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
             tools:ignore="HardcodedText" />
         <EditText
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:hint="Password"
-            android:fontFamily="@font/"
+            android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
             tools:ignore="HardcodedText" />
 

@@ -7,7 +7,7 @@
     android:color="@color/white">
 
     <ImageView
-        android:src="@drawable/checkemail"
+        android:src="@drawable/iconbackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

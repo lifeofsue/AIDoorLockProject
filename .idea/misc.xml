@@ -8,9 +8,9 @@
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/doorunlocked.xml" value="0.18297101449275363" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/fail.xml" value="0.16893115942028986" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/forgotpass.xml" value="0.18297101449275363" />
-        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/home.xml" value="0.6" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/home.xml" value="0.2" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/login.xml" value="0.18297101449275363" />
-        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/logup.xml" value="0.18297101449275363" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/logup.xml" value="0.25" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/onboarding.xml" value="0.16893115942028986" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/resetpass.xml" value="0.16893115942028986" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/success.xml" value="0.18297101449275363" />
@@ -20,5 +20,5 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

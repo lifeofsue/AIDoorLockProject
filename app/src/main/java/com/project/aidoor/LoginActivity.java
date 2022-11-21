@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     Button mRegisterBtn;
     EditText mEmailText, mPwdText;
     private FirebaseAuth firebaseAuth;
-    TextView mSwichLogUp;
+    TextView mSwichLogUp, mSwichForgotPw;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -38,6 +38,18 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 //Toast.makeText(LoginActivity.this, "2클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // ForgotPwActivity 완성하고 수정해야함!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // 화면 중간의 Forgot password? 텍스트뷰 클릭 시, forgotpass 화면으로 전환
+        mSwichForgotPw = findViewById(R.id.switchforgotpw);
+        mSwichForgotPw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent intent = new Intent(LoginActivity.this, ForgotPwActivity.class);
+                //startActivity(intent);
+                Toast.makeText(LoginActivity.this, "3클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
             }
         });
 

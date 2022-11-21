@@ -110,13 +110,14 @@
             android:fontFamily="@font/text_font" />
 
         <TextView
-            android:layout_marginTop="20dp"
+            android:id="@+id/switchsignin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/text_font"
             android:text="@string/logup_scr_gosignup"
-            android:textColor="@color/black"
-            android:fontFamily="@font/text_font" />
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </LinearLayout>

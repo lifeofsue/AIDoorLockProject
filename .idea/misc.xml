@@ -9,9 +9,12 @@
         <entry key="..\:/Home/Android_project/AIDoor1106/AIDoor/app/src/main/res/layout/onboarding.xml" value="0.21331521739130435" />
         <entry key="..\:/Home/Android_project/AIDoor1106/AIDoor/app/src/main/res/layout/vertify.xml" value="0.22552083333333334" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/fail.xml" value="0.25364583333333335" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/forgotpass.xml" value="0.25364583333333335" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/home.xml" value="0.25364583333333335" />
-        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/login.xml" value="0.2" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/logincheckemail.xml" value="0.25364583333333335" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/logup.xml" value="0.2" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/logupcheckemail.xml" value="0.25364583333333335" />
       </map>
     </option>
   </component>

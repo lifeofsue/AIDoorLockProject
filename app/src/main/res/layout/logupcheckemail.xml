@@ -33,7 +33,7 @@
         android:textColor="@color/black" />
 
     <Button
-        android:id="@+id/Btn_Checkemail"
+        android:id="@+id/Btn_LogUpCheckEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -54,6 +54,7 @@
         android:text="@string/email_scr_havenotreceived"/>
 
     <TextView
+        android:id="@+id/logupresendmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

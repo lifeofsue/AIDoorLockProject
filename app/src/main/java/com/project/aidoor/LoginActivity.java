@@ -19,7 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     Button mLoginBtn;
-    Button mRegisterBtn;
     EditText mEmailText, mPwdText;
     private FirebaseAuth firebaseAuth;
     TextView mSwichLogUp, mSwichForgotPw;
@@ -47,9 +46,9 @@ public class LoginActivity extends AppCompatActivity {
         mSwichForgotPw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(LoginActivity.this, ForgotPwActivity.class);
-                //startActivity(intent);
-                Toast.makeText(LoginActivity.this, "3클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, ForgotPwActivity.class);
+                startActivity(intent);
+                //Toast.makeText(LoginActivity.this, "3클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
             }
         });
 

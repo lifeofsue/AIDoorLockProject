@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,9 +18,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     Button mLoginBtn;
+    Button mRegisterBtn;
     EditText mEmailText, mPwdText;
     private FirebaseAuth firebaseAuth;
-    TextView mSwichLogUp, mSwichForgotPw;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -29,35 +28,19 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        // 화면 하단의 Sign Up 텍스트뷰 클릭 시, Sign in 화면으로 전환
-        mSwichLogUp = findViewById(R.id.switchsignup);
-        mSwichLogUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-                //Toast.makeText(LoginActivity.this, "2클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // ForgotPwActivity 완성하고 수정해야함!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // 화면 중간의 Forgot password? 텍스트뷰 클릭 시, forgotpass 화면으로 전환
-        mSwichForgotPw = findViewById(R.id.switchforgotpw);
-        mSwichForgotPw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, ForgotPwActivity.class);
-                startActivity(intent);
-                //Toast.makeText(LoginActivity.this, "3클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // firebase access
         firebaseAuth =  FirebaseAuth.getInstance();
 
+        mRegisterBtn = findViewById(R.id.Btn_Continue);
         mLoginBtn = findViewById(R.id.Btn_Continue);
         mEmailText = findViewById(R.id.Edit_Email);
         mPwdText = findViewById(R.id.Edit_Password);
+
+        mRegisterBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, AuthActivity.class));
+            }
+        });
 
         mLoginBtn.setOnClickListener(new View.OnClickListener(){
             @Override

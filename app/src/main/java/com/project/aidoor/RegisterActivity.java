@@ -1,10 +1,12 @@
 package com.project.aidoor;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,18 +27,32 @@ public class RegisterActivity extends AppCompatActivity {
     EditText mNameText, mEmailText, mPwdText;
     Button mRegisterBtn;
     private FirebaseAuth firebaseAuth;
+    TextView mSwichLogIn;
 
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logup);
+
+        // 화면 하단의 Sign In 텍스트뷰 클릭 시, Sign in 화면으로 전환
+        mSwichLogIn = findViewById(R.id.switchsignin);
+        mSwichLogIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+                //Toast.makeText(RegisterActivity.this, "1클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // firebase access
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference ref = db.getReference();
 
+        // 회원가입 기능 구현
         mNameText = findViewById(R.id.Edit_UserName);       // 이름
         mEmailText = findViewById(R.id.Edit_Email);         // 이메일 주소
         mPwdText = findViewById(R.id.Edit_Password);        // 패스워드
@@ -70,7 +86,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     DatabaseReference ref = db.getReference("Users");
                                     ref.child(uid).setValue(hashMap);
 
-                                    //가입이 이루어져을시 가입 화면을 빠져나감.
+                                    //가입이 이루어졌을시 가입 화면을 빠져나감.
                                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                     startActivity(intent);
                                     finish();

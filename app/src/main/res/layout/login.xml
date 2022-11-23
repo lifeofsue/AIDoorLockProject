@@ -56,7 +56,7 @@
 
         <TextView
             android:layout_marginTop="15dp"
-            android:id="@+id/ForgotPassword"
+            android:id="@+id/switchforgotpw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -87,6 +87,7 @@
             android:elevation="8dp" />
 
         <TextView
+            android:id="@+id/switchsignup"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

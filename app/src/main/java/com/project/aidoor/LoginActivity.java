@@ -46,8 +46,8 @@ public class LoginActivity extends AppCompatActivity {
         mSwichForgotPw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, ForgotPwActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(LoginActivity.this, ForgotPwActivity.class);
+                startActivity(intent2);
                 //Toast.makeText(LoginActivity.this, "3클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
             }
         });
@@ -55,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         // firebase access
         firebaseAuth =  FirebaseAuth.getInstance();
 
+        // 로그인 기능 구현
         mLoginBtn = findViewById(R.id.Btn_Continue);
         mEmailText = findViewById(R.id.Edit_Email);
         mPwdText = findViewById(R.id.Edit_Password);

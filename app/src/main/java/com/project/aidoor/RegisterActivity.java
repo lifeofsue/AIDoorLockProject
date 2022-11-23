@@ -52,6 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference ref = db.getReference();
 
+        // 회원가입 기능 구현
         mNameText = findViewById(R.id.Edit_UserName);       // 이름
         mEmailText = findViewById(R.id.Edit_Email);         // 이메일 주소
         mPwdText = findViewById(R.id.Edit_Password);        // 패스워드

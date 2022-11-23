@@ -23,15 +23,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPwActivity extends AppCompatActivity {
 
-    EditText mEmailText;
-    Button mConfirmBtn;
+    //EditText mEmailText;
+    //Button mConfirmBtn;
 
     // firebase access
-    FirebaseAuth auth = FirebaseAuth.getInstance();
-    Intent intent = getIntent();
-    String emailLink = intent.getData().toString();
+    //FirebaseAuth auth = FirebaseAuth.getInstance();
+    //Intent intent = getIntent();
+    //String emailLink = intent.getData().toString();
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

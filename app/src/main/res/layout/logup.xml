@@ -39,7 +39,7 @@
         android:orientation="vertical" >
 
         <EditText
-            android:id="@+id/Edit_UserName"
+            android:id="@+id/Sign_up_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -49,7 +49,7 @@
             tools:ignore="HardcodedText"/>
         <EditText
             android:layout_marginTop="15dp"
-            android:id="@+id/Edit_Email"
+            android:id="@+id/Sign_up_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -59,7 +59,7 @@
             tools:ignore="HardcodedText"/>
         <EditText
             android:layout_marginTop="15dp"
-            android:id="@+id/Edit_Password"
+            android:id="@+id/Sign_up_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -85,7 +85,7 @@
         android:layout_weight="1"
         android:orientation="vertical" >
         <Button
-            android:id="@+id/Btn_Continue"
+            android:id="@+id/Btn_Continue_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_scr_continue"

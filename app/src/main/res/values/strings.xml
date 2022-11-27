@@ -49,6 +49,9 @@
     <string name="mypage_scr_my_email">Email</string>
     <string name="mypage_scr_my_password">Password</string>
     <string name="mypage_scr_my_delete">Delete Your Account</string>
+    <string name="mypage_scr_name">Carly Rolfe</string>
+    <string name="mypage_scr_email">c.rolfe@gmail.com</string>
+    <string name="mypage_scr_reset">Reset Your Password</string>
 
     <string name="addu_scr_add_user">ADD USER</string>
     <string name="addu_scr_save">SAVE</string>
@@ -61,5 +64,9 @@
 
     <string name="home_scr_welcome">Welcome back,</string>
     <string name="home_scr_name">Carly Rolfe</string>
+
+    <string name="users_scr_name1">Sarah \nMurphy</string>
+    <string name="users_scr_name2">Allie \nHolcomb</string>
+    <string name="users_scr_name3">Jake \nDaniels</string>
 
 </resources>

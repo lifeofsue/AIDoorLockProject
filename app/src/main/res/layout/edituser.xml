@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:color="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/title_font"
+            android:text="@string/editu_scr_edit_user"
+            android:textColor="@color/primary_blue1"
+            android:textSize="35sp" />
+
+
+        <ImageView
+            android:id="@+id/userimage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/userphoto" />
+
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:padding="15dp"
+            android:hint="Name"
+            android:fontFamily="@font/text_font"
+            android:background="@drawable/edittext_round"
+            tools:ignore="HardcodedText, SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/Btn_Edituser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_round"
+            android:elevation="15dp"
+            android:fontFamily="@font/title_font"
+            android:padding="9dp"
+            android:text="@string/editu_scr_edit"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/addu_scr_cancel"
+            android:textColor="@color/black"
+            android:fontFamily="@font/boldtext_font" />
+
+        <TextView
+            android:layout_marginTop="190dp"
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/editu_scr_edit_delete"
+            android:textColor="@color/red"
+            android:fontFamily="@font/boldtext_font" />
+
+    </LinearLayout>

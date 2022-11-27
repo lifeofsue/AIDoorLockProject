@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -7,13 +8,16 @@
     android:layout_margin="20dp"
     android:color="@color/white">
 
-
     <ImageView
-        android:src="@drawable/iconbackground"
+        android:id="@+id/shieldlock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/iconbackground"
+        android:padding="17dp"
+        app:srcCompat="@drawable/shieldlock" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,7 +47,7 @@
         android:layout_marginTop="20dp" >
 
         <EditText
-            android:id="@+id/edit_vertify_1"
+            android:id="@+id/Edit_Vertify1"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:background="@drawable/edittext_round"
@@ -54,7 +58,7 @@
             android:inputType="textMultiLine" />
 
         <EditText
-            android:id="@+id/edit_vertify_2"
+            android:id="@+id/Edit_Vertify2"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginLeft="20dp"
@@ -66,7 +70,7 @@
             android:inputType="textMultiLine" />
 
         <EditText
-            android:id="@+id/edit_vertify_3"
+            android:id="@+id/Edit_Vertify3"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginLeft="20dp"
@@ -78,7 +82,7 @@
             android:inputType="textMultiLine"/>
 
         <EditText
-            android:id="@+id/edit_vertify_4"
+            android:id="@+id/Edit_Vertify4"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginLeft="20dp"
@@ -92,7 +96,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/Btn_Accountcreated"
+        android:id="@+id/Btn_Vertify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_round"

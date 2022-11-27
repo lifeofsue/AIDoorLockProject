@@ -23,17 +23,9 @@
       android:textColor="@color/primary_blue1"
       android:textSize="35sp" />
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:layout_marginTop="20dp"
-      android:fontFamily="@font/text_font"
-      android:text="@string/resetpass_scr_passwordrule"
-      android:textColor="@color/black" />
 
   <EditText
-      android:id="@+id/Edit_new_password"
+      android:id="@+id/Edit_newpassword"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:padding="15dp"
@@ -44,7 +36,7 @@
       tools:ignore="HardcodedText"/>
 
   <EditText
-      android:id="@+id/Edit_confirm_new_password"
+      android:id="@+id/Edit_confirmpassword"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:padding="15dp"
@@ -54,8 +46,18 @@
       android:background="@drawable/edittext_round"
       tools:ignore="HardcodedText"/>
 
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="5dp"
+      android:fontFamily="@font/text_font"
+      android:text="@string/resetpass_scr_passwordrule"
+      android:textColor="@color/black" />
+
   <Button
-      android:id="@+id/Btn_Forgotpassword"
+      android:id="@+id/Btn_Resetpassword"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="50dp"

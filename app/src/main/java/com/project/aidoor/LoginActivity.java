@@ -19,9 +19,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     Button mLoginBtn;
-    TextView mSwitchSignUp, mForgotPassword;
     EditText mEmailText, mPwdText;
     private FirebaseAuth firebaseAuth;
+    TextView mSwitchLogUp, mSwitchForgotPw;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -29,31 +29,36 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        // 화면 하단의 Sign Up 텍스트뷰 클릭 시, Sign up 화면으로 전환
+        mSwitchLogUp = findViewById(R.id.switchsignup);
+        mSwitchLogUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // ForgotPwActivity 완성하고 수정해야함!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // 화면 중간의 Forgot password? 텍스트뷰 클릭 시, forgotpass 화면으로 전환
+        mSwitchForgotPw = findViewById(R.id.switchforgotpw);
+        mSwitchForgotPw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(LoginActivity.this, ForgotPwActivity.class);
+                startActivity(intent2);
+                //Toast.makeText(LoginActivity.this, "3클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // firebase access
         firebaseAuth =  FirebaseAuth.getInstance();
 
-        mSwitchSignUp = findViewById(R.id.switchsignup);
+        // 로그인 기능 구현
         mLoginBtn = findViewById(R.id.Btn_Signin_Continue);
-        mForgotPassword = findViewById(R.id.ForgotPassword);
         mEmailText = findViewById(R.id.Edit_Email);
         mPwdText = findViewById(R.id.Edit_Password);
 
-        // Forgot Password? 텍스트 클릭 시
-        mForgotPassword.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, ForgotPwActivity.class));
-            }
-        });
-
-        // Don't have account? Sign up 텍스트 클릭 시 (=Sign Up 화면의 버튼과 같은 동작을 하도록 설정)
-        mSwitchSignUp.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-            }
-        });
-
-        // 로그인 버튼 클릭 시
         mLoginBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -64,9 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()) {
-                                    // home.xml로 바꿔야함!!!!!!!!!!!!!!!!!!!
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                    Toast.makeText(LoginActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(LoginActivity.this, "이메일 혹은 비밀번호를 다시 확인해 주세요.", Toast.LENGTH_SHORT).show();

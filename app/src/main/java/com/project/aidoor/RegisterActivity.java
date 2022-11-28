@@ -1,5 +1,6 @@
 package com.project.aidoor;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,37 +25,39 @@ import java.util.HashMap;
 public class RegisterActivity extends AppCompatActivity {
     private static final String TAG = "RegisterActivity";
     EditText mNameText, mEmailText, mPwdText;
-    TextView mSwitchSignIn;
     Button mRegisterBtn;
     private FirebaseAuth firebaseAuth;
+    TextView mSwitchLogIn;
 
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logup);
+
+        // 화면 하단의 Sign In 텍스트뷰 클릭 시, Sign in 화면으로 전환
+        mSwitchLogIn = findViewById(R.id.switchsignin);
+        mSwitchLogIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+                //Toast.makeText(RegisterActivity.this, "1클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // firebase access
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference ref = db.getReference();
 
-        mNameText = findViewById(R.id.Edit_UserName);               // 이름
-        mEmailText = findViewById(R.id.Edit_Email);                 // 이메일 주소
-        mPwdText = findViewById(R.id.Edit_Password);                // 패스워드
-        mRegisterBtn = findViewById(R.id.Btn_Signup_Continue);      // 회원가입
-        mSwitchSignIn = findViewById(R.id.switchsignin);
+        // 회원가입 기능 구현
+        mNameText = findViewById(R.id.Edit_UserName);       // 이름
+        mEmailText = findViewById(R.id.Edit_Email);         // 이메일 주소
+        mPwdText = findViewById(R.id.Edit_Password);        // 패스워드
+        mRegisterBtn = findViewById(R.id.Btn_Signup_Continue);     // 회원가입
 
-
-        // Already have account? Sign in 텍스트 클릭 시
-        mSwitchSignIn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-            }
-        });
-
-        // Sign Up 화면의 Continue 버튼 클릭 시
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,13 +86,13 @@ public class RegisterActivity extends AppCompatActivity {
                                     DatabaseReference ref = db.getReference("Users");
                                     ref.child(uid).setValue(hashMap);
 
-                                    //가입이 이루어져을시 가입 화면을 빠져나감.
+                                    //가입이 이루어졌을시 가입 화면을 빠져나감.
                                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                     startActivity(intent);
                                     finish();
                                     Toast.makeText(RegisterActivity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(RegisterActivity.this, "이미 존재하는 이메일 입니다.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterActivity.this, "이미 존재하는 아메일 입니다.", Toast.LENGTH_SHORT).show();
                                     return; //해당 메소드 진행을 멈추고 빠져나감.
                                 }
                             }
@@ -100,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public boolean onSupportNavigateUp() {
         onBackPressed();
-        ; // 뒤로가기 버튼이 눌렸을 시
+        ; // 뒤로가기 버튼이 눌렸을시
         return super.onSupportNavigateUp(); // 뒤로가기 버튼
     }
 }

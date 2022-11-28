@@ -24,7 +24,7 @@
         tools:targetApi="31">
 
 
-        <!-- MainActivity -->
+        <!-- MainActivity (메인 화면:어보딩) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
 
-        <!-- RegisterActivity -->
+        <!-- RegisterActivity (회원가입) -->
         <activity
             android:name=".RegisterActivity"
             android:exported="true">
@@ -46,7 +46,7 @@
             </intent-filter>
         </activity>
 
-        <!-- LoginActivity -->
+        <!-- LoginActivity (로그인) -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">

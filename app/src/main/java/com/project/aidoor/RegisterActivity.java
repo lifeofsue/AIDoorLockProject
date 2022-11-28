@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ import java.util.HashMap;
 public class RegisterActivity extends AppCompatActivity {
     private static final String TAG = "RegisterActivity";
     EditText mNameText, mEmailText, mPwdText;
+    TextView mSwitchSignIn;
     Button mRegisterBtn;
     private FirebaseAuth firebaseAuth;
 
@@ -37,11 +39,22 @@ public class RegisterActivity extends AppCompatActivity {
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference ref = db.getReference();
 
-        mNameText = findViewById(R.id.Edit_UserName);       // 이름
-        mEmailText = findViewById(R.id.Edit_Email);         // 이메일 주소
-        mPwdText = findViewById(R.id.Edit_Password);        // 패스워드
-        mRegisterBtn = findViewById(R.id.Btn_Continue);     // 회원가입
+        mNameText = findViewById(R.id.Edit_UserName);               // 이름
+        mEmailText = findViewById(R.id.Edit_Email);                 // 이메일 주소
+        mPwdText = findViewById(R.id.Edit_Password);                // 패스워드
+        mRegisterBtn = findViewById(R.id.Btn_Signup_Continue);      // 회원가입
+        mSwitchSignIn = findViewById(R.id.switchsignin);
 
+
+        // Already have account? Sign in 텍스트 클릭 시
+        mSwitchSignIn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            }
+        });
+
+        // Sign Up 화면의 Continue 버튼 클릭 시
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +89,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     finish();
                                     Toast.makeText(RegisterActivity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(RegisterActivity.this, "이미 존재하는 아메일 입니다.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterActivity.this, "이미 존재하는 이메일 입니다.", Toast.LENGTH_SHORT).show();
                                     return; //해당 메소드 진행을 멈추고 빠져나감.
                                 }
                             }
@@ -87,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public boolean onSupportNavigateUp() {
         onBackPressed();
-        ; // 뒤로가기 버튼이 눌렸을시
+        ; // 뒤로가기 버튼이 눌렸을 시
         return super.onSupportNavigateUp(); // 뒤로가기 버튼
     }
 }

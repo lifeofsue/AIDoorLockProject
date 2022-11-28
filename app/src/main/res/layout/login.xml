@@ -73,7 +73,7 @@
         android:layout_gravity="center_vertical">
 
         <Button
-            android:id="@+id/Btn_Continue"
+            android:id="@+id/Btn_Signin_Continue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_scr_continue"
@@ -87,6 +87,7 @@
             android:elevation="8dp" />
 
         <TextView
+            android:id="@+id/switchsignup"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

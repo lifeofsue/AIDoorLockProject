@@ -62,4 +62,16 @@
     <string name="home_scr_welcome">Welcome back,</string>
     <string name="home_scr_name">Carly Rolfe</string>
 
+    <string name="home_greetingText">Welcome back,</string>
+    <string name="home_mainUserName"><u>Carly Rolfe</u></string>
+    <string name="home_lockStatus">Locked</string>
+    <string name="home_unlockStatus">Unlocked</string>
+    <string name="menu_doorLockText">Door Lock</string>
+    <string name="menu_healthText">Health</string>
+    <string name="menu_usersText">Users</string>
+    <string name="menu_historyText">History</string>
+
+    <string name="history_time">2021/05/04 16:34:24</string>
+    <string name="history_status">Door Opened</string>
+
 </resources>

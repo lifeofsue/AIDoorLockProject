@@ -1,35 +1,71 @@
-package com.project.aidoor;
+package com.project.aidoor.history;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
-import java.util.List;
+import com.project.aidoor.R;
 
-public class HistoryActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+
+public class HistoryActivity extends AppCompatActivity implements View.OnClickListener, HistoryViewListener
+{
+
+    private ArrayList<HistoryItem> historyItems = null;
+    private HistoryAdapter historyAdapter = null;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        setTitle("History");
 
-        final String[] mid = {"히어로즈", "24시", "로스트"};
+        init();
+//        initView();
+    }
 
-        ListView list = (ListView) findViewById(R.id.historyList);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mid);
-        list.setAdapter(adapter);
+    @Override
+    public void onItemClick(int position, View view) {
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            public void onItemClick(AdapterView<?>  arg0, View arg1, int arg2, long arg3){
-                Toast.makeText(getApplicationContext(), mid[arg2], Toast.LENGTH_SHORT).show();
-            }
-        });
+    }
+
+
+    @Override
+    public void onClick(View view)
+    {
+//        switch (view.getId())
+//        {
+//            case R.id.historyPlayBtn:
+//                //action when item's clicked (historyPlayBtn)
+////                playVideo();
+//                break;
+//        }
+    }
+
+
+    private void init()
+    {
+        historyItems = new ArrayList<>();
+    }
+
+
+    private void initView()
+    {
+//        ImageButton playBtn = (ImageButton) findViewById(R.id.historyPlayBtn);
+//
+//        playBtn.setOnClickListener(this);
+//
+//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.historyList);
+//        historyAdapter = new HistoryAdapter(historyItems, this, this);
+//        recyclerView.setLayoutManager(layoutManager);
+//        recyclerView.setAdapter(historyAdapter);
     }
 }

@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- 인터넷 사용 권한 설정 -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 연결 -->
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -22,8 +21,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDoor"
         tools:targetApi="31">
-
-
         <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
@@ -34,7 +31,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- RegisterActivity -->
         <activity
             android:name=".RegisterActivity"
@@ -45,7 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- LoginActivity -->
         <activity
             android:name=".LoginActivity"
@@ -56,8 +51,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- HistoryActivity -->
+        <activity
+            android:name=".history.HistoryActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-        <!-- 추가 activity 생성 예정 -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
+
 </manifest>

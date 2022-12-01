@@ -29,7 +29,8 @@
     <string name="created_scr_continue">CONTINUE</string>
 
     <string name="forgotpass_scr_forgot_password">Forgot Password</string>
-    <string name="forgotpass_scr_enter_explain_email">Enter The Email Associated With Your Account</string>
+    <string name="forgotpass_scr_enter_explain_email1">Enter The Email Associated With Your Account</string>
+    <string name="forgotpass_scr_enter_explain_email2">Change your password through email\nauthentication</string>
     <string name="forgotpass_scr_confirm">CONFIRM</string>
 
     <string name="resetpass_scr_reset_password">Reset Password</string>

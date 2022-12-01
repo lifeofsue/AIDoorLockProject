@@ -8,7 +8,7 @@
     android:color="@color/white">
 
         <TextView
-            android:layout_width="285dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
@@ -23,11 +23,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/text_font"
-            android:text="@string/forgotpass_scr_enter_explain_email"
+            android:text="@string/forgotpass_scr_enter_explain_email1"
             android:textColor="@color/black" />
 
         <EditText
-            android:id="@+id/Edit_Email"
+            android:id="@+id/Edit_UserEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -36,6 +36,15 @@
             android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
             tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/text_font"
+            android:text="@string/forgotpass_scr_enter_explain_email2"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/Btn_Forgotpassword"
@@ -49,5 +58,23 @@
             android:text="@string/forgotpass_scr_confirm"
             android:textColor="@color/white"
             android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/text_font"
+            android:text="@string/email_scr_havenotreceived"/>
+
+        <TextView
+            android:id="@+id/ForgotPw_ResendEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/boldtext_font"
+            android:text="@string/email_scr_resend"
+            android:textColor="@color/black"/>
 
 </LinearLayout>

@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText mNameText, mEmailText, mPwdText;
     Button mRegisterBtn;
     private FirebaseAuth firebaseAuth;
-    TextView mSwitchLogIn;
+    TextView mSwichLogIn;
 
 
     @SuppressLint("ResourceType")
@@ -37,8 +37,8 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.logup);
 
         // 화면 하단의 Sign In 텍스트뷰 클릭 시, Sign in 화면으로 전환
-        mSwitchLogIn = findViewById(R.id.switchsignin);
-        mSwitchLogIn.setOnClickListener(new View.OnClickListener() {
+        mSwichLogIn = findViewById(R.id.switchsignin);
+        mSwichLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
@@ -53,9 +53,9 @@ public class RegisterActivity extends AppCompatActivity {
         DatabaseReference ref = db.getReference();
 
         // 회원가입 기능 구현
-        mNameText = findViewById(R.id.Edit_UserName);       // 이름
-        mEmailText = findViewById(R.id.Edit_Email);         // 이메일 주소
-        mPwdText = findViewById(R.id.Edit_Password);        // 패스워드
+        mNameText = findViewById(R.id.Edit_SignUp_UserName);       // 이름
+        mEmailText = findViewById(R.id.Edit_SignUp_Email);         // 이메일 주소
+        mPwdText = findViewById(R.id.Edit_SignUp_Password);        // 패스워드
         mRegisterBtn = findViewById(R.id.Btn_Signup_Continue);     // 회원가입
 
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {

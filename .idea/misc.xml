@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/accountcreated.xml" value="0.2" />
-        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/checkemail.xml" value="0.20625" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/checkemail.xml" value="0.1" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/doorunlocked.xml" value="0.18297101449275363" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/fail.xml" value="0.16893115942028986" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/forgotpass.xml" value="0.18297101449275363" />
@@ -23,4 +23,11 @@
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
+  </component>
 </project>

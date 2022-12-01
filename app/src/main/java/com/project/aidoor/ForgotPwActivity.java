@@ -2,13 +2,15 @@ package com.project.aidoor;
 
 import static android.content.ContentValues.TAG;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,78 +22,82 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class ForgotPwActivity extends AppCompatActivity {
 
-    EditText mEmailText;
+    EditText mUserEmail;
     Button mConfirmBtn;
+    TextView mResendEmail;
 
     // firebase access
     FirebaseAuth auth = FirebaseAuth.getInstance();
     Intent intent = getIntent();
-    String emailLink = intent.getData().toString();
+    String userEmail = intent.getData().toString();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forgotpass);
 
-        // 화면의 Confirm 버튼 클릭 시, login check email 화면으로 전환
-        mConfirmBtn = findViewById(R.id.Btn_Forgotpassword);
-        mConfirmBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ForgotPwActivity.this, LoginCheckEmailActivity.class);
-                startActivity(intent);
-                //Toast.makeText(LoginActivity.this, "2클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // 이메일로 인증 링크 보내기
+        // 입력한 이메일로 인증 메일(+링크) 보내기
         ActionCodeSettings actionCodeSettings =
                 ActionCodeSettings.newBuilder()
-                        // U다시 리디렉션할 URL입니다. 이에 대한 도메인(www.example.com)입니다.
-                        // URL은 Firebase 콘솔에서 화이트리스트에 있어야 합니다.
-                        .setUrl("https://aidoor-project.firebaseapp.com/__/auth/action?mode=action&oobCode=code")
+//                        .setUrl("https://aidoor-project.firebaseapp.com/__/auth/action?mode=action&oobCode=code")
+                          .setUrl("https://aidoor.page.link/forgotpw")
                         // This must be true
                         .setHandleCodeInApp(true)
-                        .setIOSBundleId("com.example.ios")
+                        //.setIOSBundleId("com.example.ios")
                         .setAndroidPackageName(
-                                "com.project.aidoor",
+                                "com.project.AiDoor",
                                 true, /* installIfNotAvailable */
                                 "12"    /* minimumVersion */)
                         .build();
 
-        //FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.sendSignInLinkToEmail(String.valueOf(mEmailText), actionCodeSettings)
+        // 사용자가 동일한 기기에서 이메일 로그인을 완료할 경우를 대비하여 사용자의 이메일을 저장
+        mUserEmail = findViewById(R.id.Edit_UserEmail);
+        String email = mUserEmail.getText().toString().trim();
+//        FirebaseAuth auth = FirebaseAuth.getInstance();
+        auth.sendSignInLinkToEmail(email, actionCodeSettings)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
+                            Toast.makeText(ForgotPwActivity.this, "이메일을 확인해주세요.", Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "Email sent.");
                         }
                     }
                 });
 
-        mEmailText = findViewById(R.id.Edit_Email);
-        String email = mEmailText.getText().toString().trim();
+        // 입력한 이메일이 가입할 때 적었던 이메일과 같은지 확인
+        if (auth.isSignInWithEmailLink(userEmail)) {
 
-        // Construct the email link credential from the current URL.
-        AuthCredential credential =
-                EmailAuthProvider.getCredentialWithLink(email, emailLink);
+            // The client SDK will parse the code from the link for you.
+            auth.signInWithEmailLink(email, userEmail)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Log.d(TAG, "Successfully signed in with email link!");
+                                AuthResult result = task.getResult();
+                                // You can access the new user via result.getUser()
+                                // Additional user info profile *not* available via:
+                                // result.getAdditionalUserInfo().getProfile() == null
+                                // You can check if the user is new or existing:
+                                // result.getAdditionalUserInfo().isNewUser()
+                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        // Re-authenticate the user with this credential.
-        auth.getCurrentUser().reauthenticateAndRetrieveData(credential)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                        } else {
-                            Log.e(TAG, "재인증 오류", task.getException());
+                                if(user.isEmailVerified()){
+                                    Toast.makeText(ForgotPwActivity.this, "인증된 이메일로 로그인 완료", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent( ForgotPwActivity.this, ChangePwActivity.class));
+                                } else{
+                                    user.sendEmailVerification();
+                                }
+                            } else {
+                                Log.e(TAG, "Error signing in with email link", task.getException());
+                            }
                         }
-                    }
-                });
-
-
+                    });
+        }
     }
 }

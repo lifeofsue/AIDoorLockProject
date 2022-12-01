@@ -40,7 +40,7 @@
         android:orientation="vertical" >
 
         <EditText
-            android:id="@+id/Edit_UserName"
+            android:id="@+id/Edit_SignUp_UserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -50,7 +50,7 @@
             tools:ignore="HardcodedText"/>
         <EditText
             android:layout_marginTop="15dp"
-            android:id="@+id/Edit_Email"
+            android:id="@+id/Edit_SignUp_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -60,7 +60,7 @@
             tools:ignore="HardcodedText"/>
         <EditText
             android:layout_marginTop="15dp"
-            android:id="@+id/Edit_Password"
+            android:id="@+id/Edit_SignUp_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -77,8 +77,14 @@
             android:text="@string/logup_scr_passwordrule"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:fontFamily="@font/text_font"
-            android:layout_marginBottom="30dp"/>
+            android:fontFamily="@font/text_font" />
+
+        <ProgressBar
+            android:id="@+id/signup_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
     </LinearLayout>
 
     <LinearLayout
@@ -86,6 +92,7 @@
         android:layout_height="0dp"
         android:layout_weight="1.8"
         android:orientation="vertical" >
+
         <Button
             android:id="@+id/Btn_Signup_Continue"
             android:layout_width="match_parent"

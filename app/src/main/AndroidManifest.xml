@@ -57,6 +57,28 @@
             </intent-filter>
         </activity>
 
+        <!-- ForgotPwActivity (비번 분실 시 이메일 인증) -->
+        <activity
+            android:name=".ForgotPwActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LoginCheckEmailActivity (로그인 이메일 인증) -->
+        <activity
+            android:name=".LoginCheckEmailActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!-- 추가 activity 생성 예정 -->
 
     </application>

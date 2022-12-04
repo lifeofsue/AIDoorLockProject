@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -7,76 +8,78 @@
     android:layout_margin="20dp"
     android:color="@color/white">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/title_font"
-            android:text="@string/forgotpass_scr_forgot_password"
+            android:text="@string/editu_scr_edit_user"
             android:textColor="@color/primary_blue1"
             android:textSize="35sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ImageView
+            android:id="@+id/userimage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/text_font"
-            android:text="@string/forgotpass_scr_enter_explain_email1"
-            android:textColor="@color/black" />
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/userphoto"
+            tools:ignore="ContentDescription" />
 
         <EditText
-            android:id="@+id/Edit_UserEmail"
+            android:id="@+id/edit_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
             android:layout_marginTop="50dp"
-            android:hint="Email"
+            android:padding="15dp"
+            android:hint="Name"
             android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
-            tools:ignore="HardcodedText"
-            android:importantForAutofill="no"
-            android:inputType="textEmailAddress" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/text_font"
-            android:text="@string/forgotpass_scr_enter_explain_email2"
-            android:textColor="@color/black" />
+            tools:ignore="HardcodedText,SpeakableTextPresentCheck"
+            android:inputType="textPersonName"
+            android:importantForAutofill="no" />
 
         <Button
-            android:id="@+id/Btn_Forgotpassword"
+            android:id="@+id/Btn_Edituser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:background="@drawable/button_round"
-            android:elevation="8dp"
+            android:elevation="15dp"
             android:fontFamily="@font/title_font"
             android:padding="9dp"
-            android:text="@string/forgotpass_scr_confirm"
+            android:text="@string/editu_scr_edit"
             android:textColor="@color/white"
             android:textSize="17sp" />
 
         <TextView
+            android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:fontFamily="@font/text_font"
-            android:text="@string/email_scr_havenotreceived"/>
+            android:text="@string/addu_scr_cancel"
+            android:textColor="@color/black"
+            android:fontFamily="@font/boldtext_font" />
 
         <TextView
-            android:id="@+id/ForgotPw_ResendEmail"
+            android:layout_marginTop="190dp"
+            android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/boldtext_font"
-            android:text="@string/email_scr_resend"
-            android:textColor="@color/black"/>
+            android:text="@string/editu_scr_edit_delete"
+            android:textColor="@color/red"
+            android:fontFamily="@font/boldtext_font" />
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -3,20 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/drawable/button_circle_line1.xml" value="0.108" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/drawable/button_circle_line2.xml" value="0.1505" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/drawable/button_circle_small.xml" value="0.1505" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/aa_lockbutton.xml" value="0.25364583333333335" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/aa_menu.xml" value="0.16145833333333334" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/aa_users.xml" value="0.16145833333333334" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/aa_welcome.xml" value="0.16145833333333334" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/accountcreated.xml" value="0.2" />
-        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/checkemail.xml" value="0.1" />
-        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/doorunlocked.xml" value="0.18297101449275363" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/adduser.xml" value="0.16145833333333334" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/checkemail.xml" value="0.176" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/doorunlocked.xml" value="0.152" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/edituser.xml" value="0.13043478260869565" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/fail.xml" value="0.16893115942028986" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/forgotpass.xml" value="0.264" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/health.xml" value="0.4" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/home.xml" value="0.2" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/login.xml" value="0.2" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/logincheckemail.xml" value="0.1" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/logup.xml" value="0.25" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/logupcheckemail.xml" value="0.1" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/mypage.xml" value="0.176" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/onboarding.xml" value="0.16893115942028986" />
-        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/resetpass.xml" value="0.1" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/resetpass.xml" value="0.2" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/success.xml" value="0.18297101449275363" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/users.xml" value="0.1" />
+        <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/verify.xml" value="0.1" />
         <entry key="..\:/Home/Android_project/AiDoor/app/src/main/res/layout/vertify.xml" value="0.25364583333333335" />
       </map>
     </option>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,11 +9,16 @@
     android:color="@color/white">
 
     <ImageView
-        android:src="@drawable/iconbackground"
+        android:id="@+id/smile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="5dp"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"/>
+        android:padding="17dp"
+        android:background="@drawable/iconbackground"
+        app:srcCompat="@drawable/laughing"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,7 +50,7 @@
         android:elevation="15dp"
         android:fontFamily="@font/title_font"
         android:padding="9dp"
-        android:text="@string/vertifydoorlock_scr_confirm"
+        android:text="@string/verifydoorlock_scr_confirm"
         android:textColor="@color/white"
         android:textSize="17sp" />
 </LinearLayout>

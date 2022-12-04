@@ -1,18 +1,17 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">AI Doorlock</string>
 
     <string name="login_scr_signin">SIGN IN</string>
-    <string name="login_scr_forgetpassword">Forgot password?</string>
+    <string name="login_scr_forgotpassword">Forgot password?</string>
     <string name="login_scr_continue">CONTINUE</string>
     <string name="login_scr_gosignup">Don\'t have an account? Sign Up</string>
 
-    <string name="vertifydoorlock_scr_vertify">Vertify Door Lock</string>
-    <string name="vertifydoorlock_scr_explain_vertification_">Please Enter The Vertification Code\nOn Your Door Lock</string>
-    <string name="vertifydoorlock_scr_confirm">CONFIRM</string>
+    <string name="verifydoorlock_scr_verify">Verify Door Lock</string>
+    <string name="verifydoorlock_scr_explain_verification_">Please Enter The Verification Code\nOn Your Door Lock</string>
+    <string name="verifydoorlock_scr_confirm">CONFIRM</string>
 
     <string name="logup_scr_signup">SIGN UP</string>
     <string name="logup_scr_create_account">Create An Account</string>
-    <string name="logup_scr_forgetpassword">Forgot password?</string>
     <string name="logup_scr_continue">CONTINUE</string>
     <string name="logup_scr_passwordrule">Use 8 or more characters with a mix of letters\, numbers &amp; symbols</string>
     <string name="logup_scr_policy">By signing up, you’re agree to our \nTerms of Use and Privacy Policy</string>
@@ -50,6 +49,9 @@
     <string name="mypage_scr_my_email">Email</string>
     <string name="mypage_scr_my_password">Password</string>
     <string name="mypage_scr_my_delete">Delete Your Account</string>
+    <string name="mypage_scr_name">Carly Rolfe</string>
+    <string name="mypage_scr_email">c.rolfe@gmail.com</string>
+    <string name="mypage_scr_reset">Reset Your Password</string>
 
     <string name="addu_scr_add_user">ADD USER</string>
     <string name="addu_scr_save">SAVE</string>
@@ -62,5 +64,9 @@
 
     <string name="home_scr_welcome">Welcome back,</string>
     <string name="home_scr_name">Carly Rolfe</string>
+
+    <string name="users_scr_name1">Sarah \nMurphy</string>
+    <string name="users_scr_name2">Allie \nHolcomb</string>
+    <string name="users_scr_name3">Jake \nDaniels</string>
 
 </resources>

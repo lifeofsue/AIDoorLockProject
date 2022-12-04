@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:color="@color/white">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/title_font"
+            android:text="@string/addu_scr_add_user"
+            android:textColor="@color/primary_blue1"
+            android:textSize="35sp" />
+
+    <ImageButton
+        android:id="@+id/button_circle_small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_circle_small"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/smiled"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/Add_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edittext_round"
+        android:fontFamily="@font/boldtext_font"
+        android:hint="Name"
+        android:padding="15dp"
+        android:importantForAutofill="no"
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck"
+        android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/Btn_Adduser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_round"
+            android:elevation="15dp"
+            android:fontFamily="@font/title_font"
+            android:padding="9dp"
+            android:text="@string/addu_scr_save"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/addu_scr_cancel"
+            android:textColor="@color/black"
+            android:fontFamily="@font/boldtext_font" />
+
+</LinearLayout>

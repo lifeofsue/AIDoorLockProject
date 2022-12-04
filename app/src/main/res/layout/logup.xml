@@ -47,7 +47,8 @@
             android:hint="User Name"
             android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
-            tools:ignore="HardcodedText"/>
+            tools:ignore="Autofill,HardcodedText"
+            android:inputType="textPersonName" />
         <EditText
             android:layout_marginTop="15dp"
             android:id="@+id/Edit_SignUp_Email"
@@ -57,7 +58,8 @@
             android:hint="Email"
             android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
-            tools:ignore="HardcodedText"/>
+            tools:ignore="Autofill,HardcodedText"
+            android:inputType="textEmailAddress" />
         <EditText
             android:layout_marginTop="15dp"
             android:id="@+id/Edit_SignUp_Password"
@@ -67,7 +69,7 @@
             android:hint="Password"
             android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
-            tools:ignore="HardcodedText" />
+            tools:ignore="Autofill,HardcodedText" />
 
         <TextView
             android:layout_marginTop="4dp"

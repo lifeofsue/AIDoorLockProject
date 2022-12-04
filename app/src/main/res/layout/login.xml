@@ -40,7 +40,8 @@
             android:hint="Email"
             android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
-            tools:ignore="HardcodedText, SpeakableTextPresentCheck" />
+            tools:ignore="Autofill,HardcodedText,SpeakableTextPresentCheck"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:layout_marginTop="15dp"
@@ -51,7 +52,7 @@
             android:hint="Password"
             android:fontFamily="@font/text_font"
             android:background="@drawable/edittext_round"
-            tools:ignore="HardcodedText" />
+            tools:ignore="Autofill,HardcodedText,TextFields" />
 
 
         <TextView
@@ -60,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="@string/login_scr_forgetpassword"
+            android:text="@string/login_scr_forgotpassword"
             android:textColor="@color/black"
             android:fontFamily="@font/boldtext_font" />
     </LinearLayout>

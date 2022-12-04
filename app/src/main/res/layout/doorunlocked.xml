@@ -30,7 +30,7 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/Btn_Unlocked"
         android:layout_width="230dp"
         android:layout_height="230dp"
         android:layout_gravity="center"
@@ -38,7 +38,8 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/button_circle_line2"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/unlock" />
+        app:srcCompat="@drawable/unlock"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -52,7 +53,8 @@
         android:rowCount="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_view">
+        app:layout_constraintTop_toBottomOf="@+id/title_view"
+        tools:ignore="ObsoleteLayoutParam">
 
         <androidx.cardview.widget.CardView
             android:layout_width="15dp"
@@ -72,18 +74,21 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/doorlock" />
+                    android:src="@drawable/doorlock"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Door Lock"
                     android:textAlignment="center"
+                    android:textColor="#212121"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -107,12 +112,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/health" />
+                    android:src="@drawable/health"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -142,12 +149,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/users" />
+                    android:src="@drawable/users"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -177,12 +186,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/history" />
+                    android:src="@drawable/history"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"

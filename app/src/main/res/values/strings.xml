@@ -69,4 +69,11 @@
     <string name="users_scr_name2">Allie \nHolcomb</string>
     <string name="users_scr_name3">Jake \nDaniels</string>
 
+    <string name="percent1">70</string>
+    <string name="percent2">20</string>
+    <string name="percent3">100</string>
+    <string name="temperature">Temperature</string>
+    <string name="heartrate">Heart Rate</string>
+    <string name="O2">SP O2</string>
+
 </resources>

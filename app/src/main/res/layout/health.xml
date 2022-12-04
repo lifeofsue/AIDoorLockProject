@@ -29,40 +29,80 @@
         android:textColor="@color/black" />
 
 
-    <ImageButton
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="-30dp"
+        android:fontFamily="@font/boldtext_font"
+        android:text="@string/temperature"
+        android:textColor="@color/black" />
+
+    <Button
         android:id="@+id/health1"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/button_circle_line2"
-        android:text="@string/home_scr_welcome"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:background="@drawable/healthbtn"
+        android:text="@string/percent1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/boldtext_font"
+        android:text="@string/heartrate"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/boldtext_font"
+        android:text="@string/O2"
+        android:textColor="@color/black" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center">
-    <ImageButton
+        android:layout_gravity="center"
+        android:layout_marginTop="-10dp">
+
+    <Button
         android:id="@+id/health2"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/button_circle_line2"
-        android:text=/>
+        android:background="@drawable/healthbtn"
+        android:text="@string/percent2"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/health3"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="60dp"
         android:layout_marginTop="1dp"
-        android:background="@drawable/button_circle_line2"
-        android:text=/>
+        android:background="@drawable/healthbtn"
+        android:text="@string/percent3"/>
 
 
     </LinearLayout>

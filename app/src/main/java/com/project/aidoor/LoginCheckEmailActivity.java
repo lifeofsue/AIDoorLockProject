@@ -17,8 +17,8 @@ public class LoginCheckEmailActivity extends AppCompatActivity {
 
     // firebase access
     FirebaseAuth auth = FirebaseAuth.getInstance();
-    Intent intent = getIntent();
-    String userEmail = intent.getData().toString();
+    Intent intent4 = getIntent();
+    String userEmail = intent4.getData().toString();
 
 
 

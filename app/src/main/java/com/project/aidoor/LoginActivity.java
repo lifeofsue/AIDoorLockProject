@@ -29,28 +29,48 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        // 화면 하단의 Sign Up 텍스트뷰 클릭 시, Sign in 화면으로 전환
+//      // 경고 수정 전 코드
+        //화면 하단의 Sign Up 텍스트뷰 클릭 시, Sign in 화면으로 전환
         mSwichLogUp = findViewById(R.id.switchsignup);
         mSwichLogUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent1);
                 //Toast.makeText(LoginActivity.this, "2클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
             }
         });
 
+//        // 화면 하단의 Sign Up 텍스트뷰 클릭 시, Sign in 화면으로 전환
+//        mSwichLogUp = findViewById(R.id.switchsignup);
+//        mSwichLogUp.setOnClickListener(v -> {
+//            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+//            startActivity(intent);
+//            //Toast.makeText(LoginActivity.this, "2클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
+//        });
+
+//        // 경고 수정 전 코드
         // ForgotPwActivity 완성하고 수정해야함!!!!!!!!!!!!!!!!!!!!!!!!!!!
         // 화면 중간의 Forgot password? 텍스트뷰 클릭 시, forgotpass 화면으로 전환
         mSwichForgotPw = findViewById(R.id.switchforgotpw);
         mSwichForgotPw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(LoginActivity.this, ForgotPwActivity.class);
+                // ForgotPwActivity 완성하고 수정해야함!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                //Intent intent2 = new Intent(LoginActivity.this, ForgotPwActivity.class);
+                Intent intent2 = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(intent2);
                 //Toast.makeText(LoginActivity.this, "3클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
             }
         });
+
+//        // 화면 중간의 Forgot password? 텍스트뷰 클릭 시, forgotpass 화면으로 전환
+//        mSwichForgotPw = findViewById(R.id.switchforgotpw);
+//        mSwichForgotPw.setOnClickListener(v -> {
+//            Intent intent2 = new Intent(LoginActivity.this, ForgotPwActivity.class);
+//            startActivity(intent2);
+//            //Toast.makeText(LoginActivity.this, "3클릭인식ㅇㅋ", Toast.LENGTH_SHORT).show();
+//        });
 
         // firebase access
         firebaseAuth =  FirebaseAuth.getInstance();
@@ -60,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
         mEmailText = findViewById(R.id.Edit_SignIn_Email);
         mPwdText = findViewById(R.id.Edit_SignIn_Password);
 
+//        // 경고 수정 전 코드
         mLoginBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -82,5 +103,22 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
+
+//        mLoginBtn.setOnClickListener(v -> {
+//            String email = mEmailText.getText().toString().trim();
+//            String pwd = mPwdText.getText().toString().trim();
+//            firebaseAuth.signInWithEmailAndPassword(email, pwd)
+//                    .addOnCompleteListener(LoginActivity.this, task -> {
+//                        //Toast.makeText(LoginActivity.this, "진입", Toast.LENGTH_SHORT).show();
+//                        if(task.isSuccessful()) {
+//                            Toast.makeText(LoginActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
+//                            Intent intent3 = new Intent(LoginActivity.this, HomeActivity.class);
+//                            startActivity(intent3);
+//                        } else {
+//                            Toast.makeText(LoginActivity.this, "이메일 혹은 비밀번호를 다시 확인해 주세요.", Toast.LENGTH_SHORT).show();
+//                            startActivity(new Intent(LoginActivity.this, LoginActivity.class));
+//                        }
+//                    });
+//        });
     }
 }

@@ -66,6 +66,13 @@
     <string name="home_mainUserName"><u>Carly Rolfe</u></string>
     <string name="home_lockStatus">Locked</string>
     <string name="home_unlockStatus">Unlocked</string>
+
+    <string name="home_text">Home</string>
+    <string name="health_text">Health</string>
+    <string name="users_text">Users</string>
+    <string name="history_text">History</string>
+
+    ------erase bottom down-----------------
     <string name="menu_doorLockText">Door Lock</string>
     <string name="menu_healthText">Health</string>
     <string name="menu_usersText">Users</string>

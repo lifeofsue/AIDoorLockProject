@@ -64,6 +64,8 @@
 
     <string name="home_greetingText">Welcome back,</string>
     <string name="home_mainUserName"><u>Carly Rolfe</u></string>
+    <string name="doorlock_textview">Control the door lock \n by pressing the button</string>
+    <string name="door_status">Locked</string>
     <string name="home_lockStatus">Locked</string>
     <string name="home_unlockStatus">Unlocked</string>
 
